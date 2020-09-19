@@ -1,0 +1,275 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 3em 0em 3em;
+}
+nav .logo {
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  width: 250px;
+}
+nav .logo img {
+  width: 100%;
+  height: auto;
+}
+nav .nav__menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+nav .nav__menu li {
+  align-items: center;
+  margin-left: 1rem;
+}
+nav .nav__menu li a {
+  font-size: 0.9rem;
+  color: #020300;
+  letter-spacing: 0.14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav .nav__menu li a:hover {
+  color: #D3D3D3;
+  transition: 0.5s all ease-in-out;
+}
+
+.main {
+  width: 100vw;
+}
+.main .mainbody {
+  background-color: black;
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+.main .mainbody .mainimg {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+}
+.main .mainbody .banner__text-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transform: translateY(-80%);
+}
+.main .mainbody .banner__text-container .bannerHeader {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+.main .mainbody .banner__text-container .bannerSubText {
+  font-size: 0.75rem;
+  font-family: "Poppins", monospace;
+  letter-spacing: 0.5px;
+}
+.main .greetingsDiv {
+  padding: 5em 0em 5em;
+  width: 100vw;
+  text-align: center;
+}
+.main .greetingsDiv .greetingsHeader {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.main .greetingsDiv .greetingsSubtext {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: 30px;
+  margin: 2rem 0;
+}
+.main .greetingsDiv .greetingBttn {
+  padding: 1rem 3rem;
+  color: #020300;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #020300;
+  letter-spacing: 1px;
+}
+.main .greetingsDiv .greetingBttn:hover {
+  color: white;
+  background-color: #020300;
+  border: 2px solid #020300;
+  transition: 0.3s all ease-in-out;
+}
+.main .greetingsDiv .greetingsSocialUl {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  margin: 2rem auto 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+.main .greetingsDiv .greetingsSocialUl li i {
+  font-size: 1.5rem;
+  color: #020300;
+}
+.main .greetingsDiv .greetingsSocialUl li i:hover {
+  color: #D3D3D3;
+  transition: 0.3s all ease-in-out;
+}
+.main .videoDiv {
+  width: 100%;
+  padding: 0 0 6rem;
+  text-align: center;
+}
+.main .videoDiv .vidinfo h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #020300;
+}
+.main .videoDiv .vidinfo .iframe__container {
+  width: 100vw;
+  height: 30vh;
+  margin: 0 auto;
+}
+.main .videoDiv .vidinfo .iframe__container iframe {
+  width: 100%;
+  height: 100%;
+}
+.main .visualJournalDiv {
+  width: 100%;
+  position: relative;
+  height: 70vh;
+  background-color: black;
+  margin-bottom: 8rem;
+}
+.main .visualJournalDiv .vjImgDiv {
+  background-image: url(../img/vj1.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  height: 100%;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+}
+.main .visualJournalDiv .vjInfoDiv {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transform: translateY(-50%);
+}
+.main .visualJournalDiv .vjInfoDiv h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: normal;
+  margin: 2rem 0;
+}
+.main .visualJournalDiv .vjInfoDiv span {
+  font-size: 0.95rem;
+  font-family: "Poppins", monospace;
+  letter-spacing: 0.5px;
+}
+.main .visualJournalDiv .vjInfoDiv .vjBttn {
+  padding: 1rem 3rem;
+  color: #020300;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  letter-spacing: 1px;
+}
+.main .visualJournalDiv .vjInfoDiv .vjBttn:hover {
+  color: #020300;
+  background-color: white;
+  border: 2px solid white;
+  transition: 0.3s all ease-in-out;
+}
+.main .masterinfo {
+  padding: 0 0;
+  margin: 0 auto;
+  width: 100vw;
+}
+.main .masterinfo .info {
+  text-align: center;
+  display: inline;
+}
+.main .masterinfo .info h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #020300;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5rem;
+  font-weight: normal;
+}
+.main .masterinfo .info .subinfo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main .masterinfo .info .subinfo .block-photographer {
+  overflow-wrap: break-word;
+  width: 80vw;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.main .masterinfo .info .subinfo .block-coder {
+  overflow-wrap: break-word;
+  width: 80vw;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.main .masterinfo .info .subinfo .block-photographer h1, .main .masterinfo .info .subinfo .block-coder h1 {
+  margin: 1em 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.main .masterinfo .info .subinfo p {
+  color: #020300;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+.main .masterinfo .info .subinfo button {
+  padding: 1rem 3rem;
+  color: #020300;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #020300;
+  letter-spacing: 1px;
+}
+.main .masterinfo .info .subinfo button:hover {
+  color: white;
+  background-color: #020300;
+  border: 2px solid #020300;
+  transition: 0.3s all ease-in-out;
+}
