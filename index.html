@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,34 @@
     <title>Shashank Thapa</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        </style>    
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
     <link rel="stylesheet" href="assets/style/main.css">
-    <link rel="shortcut icon" type="ico" href="assets/favicon/favicon.ico"/>
+    <link rel="shortcut icon" type="ico" href="assets/favicon/favicon.ico" />
 </head>
-<body>
+
+<body id="body">
     <nav>
-        <a href="https://www.shashankthapa.com" class="logo"><img src="assets/img/logo.svg" ></h2></a>
-        <ul class="nav__menu">
-            <li><a href="videos">VIDEOS</a></li>
-            <li><a href="https://github.com/shashank-thapa" target="_blank">CODE</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">ABOUT</a></li>
-        </ul>
+        <a href="https://www.shashankthapa.com" class="logo"><img src="assets/img/logo.svg"></h2></a>
+        <a href="#" class="menu hide-for-desktop" id="btnHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="nav__menu hide-for-mobile">
+            <a href="videos">VIDEOS</a>
+            <a href="https://github.com/shashank-thapa" target="_blank">CODE</a>
+            <a href="#">CONTACT</a>
+            <a href="#">ABOUT</a>
+        </div>
     </nav>
+
+    <div class="mobileMenu" id="mobileMenu">
+        <a href="">Videos</a>
+        <a href="">Code</a>
+        <a href="">Contact</a>
+        <a href="">About</a></div>
+
     <div class="main">
         <div class="mainbody">
             <div class="mainimg"></div>
@@ -30,59 +45,71 @@
                 <div id="mouse_icon"></div>
             </div>
         </div>
-            
-            <div class="greetingsDiv">
-                <span class="greetingsHeader">Hey, my name is Shashank</span><br>
-                <span class="greetingsSubtext">I'm a 21 year old computer engineering student with an avid interest in design & filmmaking for about 5 years. Currently based in Kathmandu, Nepal.</span><br>
-                <button class="greetingBttn">More about me</button><br>
-                <ul class="greetingsSocialUl">
-                    <li><a href="www.instagram.com/shashankxthapa"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                </ul>
-            </div>
 
-            <div class="videoDiv">
-                <div class="vidinfo">
+        <div class="greetingsDiv">
+            <span class="greetingsHeader">Hey, my name is Shashank</span>
+            <span class="greetingsSubtext">I'm a 21 year old computer engineering student with an avid interest in
+                design & filmmaking for about 5 years. Currently based in Kathmandu, Nepal.</span>
+            <button class="greetingBttn">More about me</button><br>
+            <ul class="greetingsSocialUl">
+                <li><a href="www.instagram.com/shashankxthapa"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="videoDiv">
+            <div class="vidinfo">
                 <h1>RECENT VIDEO</h1>
                 <br>
                 <div class="iframe__container">
-                    <iframe src="https://www.youtube.com/embed/9ECuZX-pl9c?vq=hd1080&rel=0" frameborder="0"></iframe>
+                    <iframe src="https://www.youtube.com/embed/9ECuZX-pl9c?vq=hd1080&rel=0" frameborder="0" width="100%"
+                        height="100%"></iframe>
                 </div>
             </div>
-            </div>    
+        </div>
 
-            <div class="visualJournalDiv">
-                <div class="vjImgDiv"></div>
-                <div class="vjInfoDiv">
-                    <span>A personal video series</span>
-                    <h1>A visual<br>Journal</h1>
-                    <button class="vjBttn">Watch Here</button>
-                </div>
+        <div class="visualJournalDiv">
+            <div class="vjImgDiv"></div>
+            <div class="vjInfoDiv">
+                <span>A personal video series</span>
+                <h1>A visual<br>Journal</h1>
+                <button class="vjBttn">Watch Here</button>
             </div>
+        </div>
 
-        <div class="masterinfo">
+        <!--<div class="masterinfo">
             <div class="info">
                 <h1>What else do I do?</h1>
                 <br>
                 <div class="subinfo">
                     <div class="info block-photographer">
-                        <img src="assets/img/photo.jpg" width="100vw" height="auto" class="photoimage">
-                        <h1>Photographer</h1>
-                        <p>A freelance photographer, who loves to travel and document things. I've been doing this for more than 5 years now and I'm still in love with it.</p>
-                        <button onclick="window.open('https://instagram.com/shashankxthapa','_blank')">Instagram</button>
+                        <div class="photo1"></div>
+                        <div class="whatelseinfo1">
+                            <h1>Photographer</h1>
+                            <p>A freelance photographer, who loves to travel and document things. I've been doing this
+                                for
+                                more than 5 years now and I'm still in love with it.</p>
+                            <button
+                                onclick="window.open('https://instagram.com/shashankxthapa','_blank')">Instagram</button>
+                        </div>
                     </div>
                     <div class="info block-coder">
-                        <img src="assets/img/coding.jpg" width="100vw" height="auto" class="coderimage">
-                        <h1>Frontend Developer</h1>
-                        <p>A self taught frontend developer focusing on web development. I've been doing this for a year now and I'm excited to learn new things everyday.</p>
-                        <button onclick="window.open('https://github.com/shashank-thapa','_blank')">Github</button>
+                        <div class="photo2"></div>
+                        <div class="whatelseinfo2">
+                            <h1>Frontend Developer</h1>
+                            <p>A self taught frontend developer focusing on web development. I've been doing this for a
+                                year now and I'm excited to learn new things everyday.</p>
+                            <button onclick="window.open('https://github.com/shashank-thapa','_blank')">Github</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
-</body>
-</html>
 
+    <script src="assets/script/script.js"></script>
+</body>
+
+</html>

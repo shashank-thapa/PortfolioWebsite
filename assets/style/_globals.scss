@@ -1,15 +1,30 @@
-html{
-    font-size: 100%;
-    box-sizing: border-box;
+@import "mixins";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    
-    a{
-        text-decoration: none;
-    }
-    
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }

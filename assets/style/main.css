@@ -8,13 +8,28 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body a {
   text-decoration: none;
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,9 +38,46 @@ nav {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-x: hidden;
-  width: 100vw;
-  padding: 3em 0em 3em;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  top: 0;
+  padding: 3em 2rem 3em;
+}
+
+nav .menu > span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #020300;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-origin: 2px 1px;
+          transform-origin: 2px 1px;
+}
+
+nav .menu > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+nav .menu.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+nav .menu.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 nav .logo {
@@ -33,7 +85,7 @@ nav .logo {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 250px;
+  width: 10rem;
 }
 
 nav .logo img {
@@ -42,35 +94,43 @@ nav .logo img {
 }
 
 nav .nav__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   list-style: none;
   padding: 0;
 }
 
-nav .nav__menu li {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
-}
-
-nav .nav__menu li a {
-  font-size: .9rem;
+nav .nav__menu a {
+  font-size: 0.875rem;
   color: #020300;
-  letter-spacing: .14px;
+  letter-spacing: 0.14px;
   text-decoration: none;
   font-weight: 500;
 }
 
-nav .nav__menu li a:hover {
+nav .nav__menu a:not(:last-child) {
+  margin-right: 32px;
+}
+
+nav .nav__menu a:hover {
   color: #D3D3D3;
-  -webkit-transition: .5s all ease-in-out;
-  transition: .5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.mobileMenu {
+  background-color: white;
+  padding: 1.625rem 2.5rem;
+  height: 100vh;
+  display: none;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.mobileMenu a {
+  display: block;
+  color: #020300;
+  padding: 0.625rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main {
@@ -89,9 +149,9 @@ nav .nav__menu li a:hover {
   height: 100%;
   background-image: url(../img/banner.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-attachment: fixed;
-  opacity: .7;
+  opacity: 0.7;
   background-repeat: no-repeat;
 }
 
@@ -113,14 +173,15 @@ nav .nav__menu li a:hover {
 }
 
 .main .mainbody .banner__text-container .bannerSubText {
-  font-size: .75rem;
-  font-family: "Poppins", monospace;
-  letter-spacing: .5px;
+  font-size: 0.85rem;
+  font-family: "PT Serif", serif;
+  letter-spacing: 0.5px;
 }
 
 .main .greetingsDiv {
   padding: 5em 0em 5em;
-  width: 100vw;
+  width: 90vw;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -137,16 +198,20 @@ nav .nav__menu li a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 30px;
-  margin: 2rem 0;
+  max-width: 700px;
+  font-family: "PT Serif", serif;
+  margin: 2rem auto;
 }
 
 .main .greetingsDiv .greetingBttn {
   padding: 1rem 3rem;
   color: #020300;
   background-color: white;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   outline: none;
@@ -159,8 +224,8 @@ nav .nav__menu li a:hover {
   color: white;
   background-color: #020300;
   border: 2px solid #020300;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .main .greetingsDiv .greetingsSocialUl {
@@ -170,6 +235,7 @@ nav .nav__menu li a:hover {
   list-style: none;
   width: 60%;
   margin: 2rem auto 0;
+  max-width: 200px;
   padding: 0;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -183,33 +249,50 @@ nav .nav__menu li a:hover {
 
 .main .greetingsDiv .greetingsSocialUl li i:hover {
   color: #D3D3D3;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .main .videoDiv {
   width: 100%;
-  padding: 0 0 6rem;
   text-align: center;
+  margin: 0 auto;
+}
+
+.main .videoDiv .vidinfo {
+  padding-bottom: 6rem;
 }
 
 .main .videoDiv .vidinfo h1 {
-  font-size: 1.2rem;
+  font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 600;
   color: #020300;
 }
 
 .main .videoDiv .vidinfo .iframe__container {
-  width: 100vw;
-  height: 30vh;
+  width: 90vw;
+  max-width: 800px;
+  height: auto;
+  position: relative;
+  padding-bottom: 26.25%;
   margin: 0 auto;
 }
 
+@media (max-width: 63.9375em) {
+  .main .videoDiv .vidinfo .iframe__container {
+    padding-bottom: 56.25%;
+  }
+}
+
 .main .videoDiv .vidinfo .iframe__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  max-height: 499px;
 }
 
 .main .visualJournalDiv {
@@ -227,7 +310,7 @@ nav .nav__menu li a:hover {
   width: 100%;
   background-attachment: fixed;
   height: 100%;
-  opacity: .8;
+  opacity: 0.8;
   background-repeat: no-repeat;
 }
 
@@ -250,16 +333,16 @@ nav .nav__menu li a:hover {
 }
 
 .main .visualJournalDiv .vjInfoDiv span {
-  font-size: .95rem;
-  font-family: "Poppins", monospace;
-  letter-spacing: .5px;
+  font-size: 0.95rem;
+  font-family: "PT Serif", serif;
+  letter-spacing: 0.5px;
 }
 
 .main .visualJournalDiv .vjInfoDiv .vjBttn {
   padding: 1rem 3rem;
   color: #020300;
   background-color: transparent;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   outline: none;
@@ -273,8 +356,8 @@ nav .nav__menu li a:hover {
   color: #020300;
   background-color: white;
   border: 2px solid white;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .main .masterinfo {
@@ -289,7 +372,7 @@ nav .nav__menu li a:hover {
 }
 
 .main .masterinfo .info h1 {
-  font-size: 1.2rem;
+  font-size: 1.1em;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -297,43 +380,58 @@ nav .nav__menu li a:hover {
   padding: 0;
   margin: 0;
   margin-bottom: 5rem;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .main .masterinfo .info .subinfo {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .main .masterinfo .info .subinfo .block-photographer {
-  overflow-wrap: break-word;
-  width: 80vw;
-  display: inline-block;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  width: 90vw;
+  height: 70%;
+}
+
+.main .masterinfo .info .subinfo .block-photographer .whatelseinfo1 {
+  margin-bottom: 5rem;
+}
+
+.main .masterinfo .info .subinfo .block-photographer .photo1 {
+  background-image: url(../img/photo.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .main .masterinfo .info .subinfo .block-coder {
-  overflow-wrap: break-word;
-  width: 80vw;
-  display: inline-block;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  margin-top: 15rem;
+  width: 90vw;
+  height: 40%;
 }
 
-.main .masterinfo .info .subinfo .block-photographer h1, .main .masterinfo .info .subinfo .block-coder h1 {
+.main .masterinfo .info .subinfo .block-coder .whatelseinfo2 {
+  margin-bottom: 5rem;
+}
+
+.main .masterinfo .info .subinfo .block-coder .photo2 {
+  background-image: url(../img/coding.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main .masterinfo .info .subinfo .block-photographer h1,
+.main .masterinfo .info .subinfo .block-coder h1 {
   margin: 1em 0;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .main .masterinfo .info .subinfo p {
@@ -341,26 +439,27 @@ nav .nav__menu li a:hover {
   font-size: 1rem;
   font-weight: normal;
   padding-bottom: 20px;
+  font-family: "PT Serif", serif;
 }
 
 .main .masterinfo .info .subinfo button {
-  padding: 1rem 3rem;
+  padding: 0.8rem 2rem;
   color: #020300;
   background-color: white;
-  font-size: .9rem;
-  font-weight: bold;
+  font-size: 0.8em;
+  font-weight: 600;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
   border: 2px solid #020300;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 .main .masterinfo .info .subinfo button:hover {
   color: white;
   background-color: #020300;
   border: 2px solid #020300;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 /*# sourceMappingURL=main.css.map */
