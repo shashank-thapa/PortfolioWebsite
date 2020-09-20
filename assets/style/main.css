@@ -29,6 +29,10 @@ body a {
 
 header {
   background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 4;
 }
 
 header nav {
@@ -43,16 +47,12 @@ header nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  max-width: 70vw;
+  max-width: 80vw;
   margin: 0 auto;
   background-color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 4;
-  top: 0;
   padding: 3em 0rem 3em;
 }
 
@@ -454,6 +454,7 @@ header nav .nav__menu a:hover {
   font-weight: normal;
   padding-bottom: 20px;
   font-family: "PT Serif", serif;
+  line-height: 30px;
 }
 
 .main .masterinfo .info .subinfo button {

@@ -2,19 +2,19 @@
 
 header {
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 4;
   nav {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 70vw;
+    max-width: 80vw;
     margin: 0 auto;
     background-color: white;
     align-items: center;
-    position: sticky;
-    z-index: 4;
-    top: 0;
     padding: 3em 0rem 3em;
 
     .menu {
@@ -383,6 +383,7 @@ header {
           font-weight: normal;
           padding-bottom: 20px;
           font-family: "PT Serif", serif;
+          line-height: 30px;
         }
 
         button {
