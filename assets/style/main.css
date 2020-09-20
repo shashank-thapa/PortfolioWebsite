@@ -27,7 +27,11 @@ body a {
   }
 }
 
-nav {
+header {
+  background-color: white;
+}
+
+header nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -39,19 +43,20 @@ nav {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  max-width: 70vw;
   margin: 0 auto;
   background-color: white;
-  position: -webkit-sticky;
-  position: sticky;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 4;
   top: 0;
-  padding: 3em 2rem 3em;
+  padding: 3em 0rem 3em;
 }
 
-nav .menu > span {
+header nav .menu > span {
   display: block;
   width: 26px;
   height: 3px;
@@ -62,25 +67,25 @@ nav .menu > span {
           transform-origin: 2px 1px;
 }
 
-nav .menu > span:not(:last-child) {
+header nav .menu > span:not(:last-child) {
   margin-bottom: 5px;
 }
 
-nav .menu.open > span:first-child {
+header nav .menu.open > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-nav .menu.open > span:nth-child(2) {
+header nav .menu.open > span:nth-child(2) {
   opacity: 0;
 }
 
-nav .menu.open > span:last-child {
+header nav .menu.open > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-nav .logo {
+header nav .logo {
   text-decoration: none;
   display: -ms-grid;
   display: grid;
@@ -88,17 +93,17 @@ nav .logo {
   width: 10rem;
 }
 
-nav .logo img {
+header nav .logo img {
   width: 100%;
   height: auto;
 }
 
-nav .nav__menu {
+header nav .nav__menu {
   list-style: none;
   padding: 0;
 }
 
-nav .nav__menu a {
+header nav .nav__menu a {
   font-size: 0.875rem;
   color: #020300;
   letter-spacing: 0.14px;
@@ -106,11 +111,11 @@ nav .nav__menu a {
   font-weight: 500;
 }
 
-nav .nav__menu a:not(:last-child) {
+header nav .nav__menu a:not(:last-child) {
   margin-right: 32px;
 }
 
-nav .nav__menu a:hover {
+header nav .nav__menu a:hover {
   color: #D3D3D3;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
@@ -147,15 +152,11 @@ nav .nav__menu a:hover {
 .main .mainbody .mainimg {
   width: 100%;
   height: 100%;
-  background-image: url(../img/banner.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.7;
-  background-repeat: no-repeat;
+  background: transparent;
 }
 
 .main .mainbody .banner__text-container {
+  z-index: 3;
   position: absolute;
   top: 50%;
   width: 100%;
@@ -300,7 +301,7 @@ nav .nav__menu a:hover {
   position: relative;
   height: 70vh;
   background-color: black;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 
 .main .visualJournalDiv .vjImgDiv {
@@ -361,8 +362,10 @@ nav .nav__menu a:hover {
 }
 
 .main .masterinfo {
-  padding: 0 0;
+  padding: 0 0 5rem;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100vw;
 }
 
@@ -379,53 +382,64 @@ nav .nav__menu a:hover {
   color: #020300;
   padding: 0;
   margin: 0;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   font-weight: 600;
 }
 
 .main .masterinfo .info .subinfo {
   margin: 0 auto;
+  width: 90vw;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 5rem;
 }
 
 .main .masterinfo .info .subinfo .block-photographer {
   margin: 0 auto;
-  width: 90vw;
-  height: 70%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .main .masterinfo .info .subinfo .block-photographer .whatelseinfo1 {
-  margin-bottom: 5rem;
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .main .masterinfo .info .subinfo .block-photographer .photo1 {
   background-image: url(../img/photo.jpg);
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  height: 30vh;
 }
 
 .main .masterinfo .info .subinfo .block-coder {
   margin: 0 auto;
-  margin-top: 15rem;
-  width: 90vw;
-  height: 40%;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main .masterinfo .info .subinfo .block-coder .whatelseinfo2 {
-  margin-bottom: 5rem;
+  width: 85%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .main .masterinfo .info .subinfo .block-coder .photo2 {
   background-image: url(../img/coding.jpg);
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  height: 30vh;
 }
 
 .main .masterinfo .info .subinfo .block-photographer h1,
@@ -459,6 +473,45 @@ nav .nav__menu a:hover {
   color: white;
   background-color: #020300;
   border: 2px solid #020300;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+footer h3 {
+  color: #D3D3D3;
+  font-size: 0.7rem;
+  padding: 0 0 1rem;
+  margin: 0;
+}
+
+footer .footerSocialUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 60%;
+  margin: 2rem auto 0;
+  max-width: 200px;
+  padding: 1rem 0 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .footerSocialUl li i {
+  font-size: 1.3rem;
+  color: #020300;
+}
+
+footer .footerSocialUl li i:hover {
+  color: #D3D3D3;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }

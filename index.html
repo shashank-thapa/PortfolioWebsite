@@ -12,23 +12,27 @@
     </style>
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="shortcut icon" type="ico" href="assets/favicon/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/script/parallax.js"></script>
 </head>
 
 <body id="body">
-    <nav>
-        <a href="https://www.shashankthapa.com" class="logo"><img src="assets/img/logo.svg"></h2></a>
-        <a href="#" class="menu hide-for-desktop" id="btnHamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <div class="nav__menu hide-for-mobile">
-            <a href="videos">VIDEOS</a>
-            <a href="https://github.com/shashank-thapa" target="_blank">CODE</a>
-            <a href="#">CONTACT</a>
-            <a href="#">ABOUT</a>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <a href="https://www.shashankthapa.com" class="logo"><img src="assets/img/logo.svg"></h2></a>
+            <a href="#" class="menu hide-for-desktop" id="btnHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav__menu hide-for-mobile">
+                <a href="videos">VIDEOS</a>
+                <a href="https://github.com/shashank-thapa" target="_blank">CODE</a>
+                <a href="#">CONTACT</a>
+                <a href="#">ABOUT</a>
+            </div>
+        </nav>
+    </header>
 
     <div class="mobileMenu" id="mobileMenu">
         <a href="">Videos</a>
@@ -37,8 +41,9 @@
         <a href="">About</a></div>
 
     <div class="main">
-        <div class="mainbody">
-            <div class="mainimg"></div>
+        <div class="mainbody" id="mainbody">
+            <div class="mainimg" id="mainImg" data-parallax="scroll" data-z-index="1"
+                data-image-src="assets/img/banner.jpg"></div>
             <div class="banner__text-container">
                 <span class="bannerHeader">Welcome to my story</span><br>
                 <span class="bannerSubText">Filmmaker | Frontend developer | UI designer</span>
@@ -65,13 +70,13 @@
                 <br>
                 <div class="iframe__container">
                     <iframe src="https://www.youtube.com/embed/9ECuZX-pl9c?vq=hd1080&rel=0" frameborder="0" width="100%"
-                        height="100%"></iframe>
+                        height="100%" allowfullscreen="true"></iframe>
                 </div>
             </div>
         </div>
 
         <div class="visualJournalDiv">
-            <div class="vjImgDiv"></div>
+            <div class="vjImgDiv" id="vjImgDiv"></div>
             <div class="vjInfoDiv">
                 <span>A personal video series</span>
                 <h1>A visual<br>Journal</h1>
@@ -79,12 +84,12 @@
             </div>
         </div>
 
-        <!--<div class="masterinfo">
+        <div class="masterinfo">
             <div class="info">
                 <h1>What else do I do?</h1>
                 <br>
                 <div class="subinfo">
-                    <div class="info block-photographer">
+                    <div class="block-photographer">
                         <div class="photo1"></div>
                         <div class="whatelseinfo1">
                             <h1>Photographer</h1>
@@ -95,7 +100,7 @@
                                 onclick="window.open('https://instagram.com/shashankxthapa','_blank')">Instagram</button>
                         </div>
                     </div>
-                    <div class="info block-coder">
+                    <div class="block-coder">
                         <div class="photo2"></div>
                         <div class="whatelseinfo2">
                             <h1>Frontend Developer</h1>
@@ -106,9 +111,20 @@
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
 
+    <footer>
+        <ul class="footerSocialUl">
+            <li><a href="www.instagram.com/shashankxthapa"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+        </ul>
+        <div class="copyright">
+            <h3>© Shashank Thapa 2020 || All Rights Reserved</h3>
+        </div>
+    </footer>
     <script src="assets/script/script.js"></script>
 </body>
 
