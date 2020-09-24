@@ -1,0 +1,95 @@
+@import "globals";
+@import "colors";
+
+main {
+  box-sizing: border-box;
+  margin: 5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form-main {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80vw;
+    max-width: 600px;
+
+    h1 {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: clamp(25px, 5vw, 30px);
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      font-family: "PT Serif", serif;
+      letter-spacing: 0.5px;
+      font-size: clamp(1em, 1.7vw, 1.1em);
+      margin: 1em 0 1em;
+      text-align: center;
+    }
+
+    .form_container {
+      margin: 2em 0 2em;
+
+      p {
+        text-align: left;
+        padding: 0;
+        font-weight: normal;
+        margin: 0 0 1em;
+        letter-spacing: 0.5px;
+        font-size: clamp(1em, 1.7vw, 1.1em);
+      }
+
+      input {
+        box-sizing: border-box;
+        border: 2px solid rgb(194, 194, 194);
+        margin: 0 0 2em;
+        width: 100%;
+        padding: 1em;
+        font-family: "Poppins", sans-serif;
+      }
+
+      textarea {
+        box-sizing: border-box;
+        border: 2px solid rgb(194, 194, 194);
+        width: 100%;
+        padding: 1em;
+        font-family: "Poppins", sans-serif;
+        height: 100px;
+      }
+
+      .contactBtnDiv {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 2em;
+
+        #contactBttn {
+          padding: 1rem 3rem;
+          color: $blackColor;
+          background-color: white;
+          font-size: 0.9rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          outline: none;
+          cursor: pointer;
+          border: 2px solid $blackColor;
+          letter-spacing: 1px;
+        }
+
+        #contactBttn:hover {
+          color: white;
+          background-color: $blackColor;
+          border: 2px solid $blackColor;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+}

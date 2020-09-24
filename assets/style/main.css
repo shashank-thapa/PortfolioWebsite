@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -33,6 +34,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 4;
+  width: 100vw;
 }
 
 header nav {
@@ -49,7 +51,6 @@ header nav {
   width: 100%;
   max-width: 80vw;
   margin: 0 auto;
-  background-color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -243,12 +244,28 @@ header nav .nav__menu a:hover {
           justify-content: space-evenly;
 }
 
-.main .greetingsDiv .greetingsSocialUl li i {
+.main .greetingsDiv .greetingsSocialUl li .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.main .greetingsDiv .greetingsSocialUl li .fa-instagram:hover {
+  color: #833ab4;
+}
+
+.main .greetingsDiv .greetingsSocialUl li .fa-youtube:hover {
+  color: #ff0000;
+}
+
+.main .greetingsDiv .greetingsSocialUl li .fa-dribbble:hover {
+  color: #f082ac;
+}
+
+.main .greetingsDiv .greetingsSocialUl li a i {
   font-size: 1.5rem;
   color: #020300;
 }
 
-.main .greetingsDiv .greetingsSocialUl li i:hover {
+.main .greetingsDiv .greetingsSocialUl li a i:hover {
   color: #D3D3D3;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
@@ -478,6 +495,37 @@ header nav .nav__menu a:hover {
   transition: 0.3s all ease-in-out;
 }
 
+.topBttn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.topBttn button {
+  background-color: #020300;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #020300;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.topBttn button:hover {
+  padding: 0.8rem 1.5rem;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
 footer {
   display: block;
   text-align: center;
@@ -506,6 +554,22 @@ footer .footerSocialUl {
           justify-content: space-evenly;
 }
 
+footer .footerSocialUl .fa-facebook:hover {
+  color: #3b5998;
+}
+
+footer .footerSocialUl .fa-instagram:hover {
+  color: #833ab4;
+}
+
+footer .footerSocialUl .fa-youtube:hover {
+  color: #ff0000;
+}
+
+footer .footerSocialUl .fa-dribbble:hover {
+  color: #f082ac;
+}
+
 footer .footerSocialUl li i {
   font-size: 1.3rem;
   color: #020300;
@@ -513,6 +577,146 @@ footer .footerSocialUl li i {
 
 footer .footerSocialUl li i:hover {
   color: #D3D3D3;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body a {
+  text-decoration: none;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+main {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .form-main {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80vw;
+  max-width: 600px;
+}
+
+main .form-main h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(25px, 5vw, 30px);
+  letter-spacing: 2px;
+}
+
+main .form-main p {
+  font-size: 0.95rem;
+  font-family: "PT Serif", serif;
+  letter-spacing: 0.5px;
+  font-size: clamp(1em, 1.7vw, 1.1em);
+  margin: 1em 0 1em;
+  text-align: center;
+}
+
+main .form-main .form_container {
+  margin: 2em 0 2em;
+}
+
+main .form-main .form_container p {
+  text-align: left;
+  padding: 0;
+  font-weight: normal;
+  margin: 0 0 1em;
+  letter-spacing: 0.5px;
+  font-size: clamp(1em, 1.7vw, 1.1em);
+}
+
+main .form-main .form_container input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #c2c2c2;
+  margin: 0 0 2em;
+  width: 100%;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+main .form-main .form_container textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #c2c2c2;
+  width: 100%;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  height: 100px;
+}
+
+main .form-main .form_container .contactBtnDiv {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em;
+}
+
+main .form-main .form_container .contactBtnDiv #contactBttn {
+  padding: 1rem 3rem;
+  color: #020300;
+  background-color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #020300;
+  letter-spacing: 1px;
+}
+
+main .form-main .form_container .contactBtnDiv #contactBttn:hover {
+  color: white;
+  background-color: #020300;
+  border: 2px solid #020300;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }

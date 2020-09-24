@@ -5,6 +5,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 4;
+  width: 100vw;
   nav {
     box-sizing: border-box;
     display: flex;
@@ -13,7 +14,6 @@ header {
     width: 100%;
     max-width: 80vw;
     margin: 0 auto;
-    background-color: white;
     align-items: center;
     padding: 3em 0rem 3em;
 
@@ -183,14 +183,29 @@ header {
       padding: 0;
       justify-content: space-evenly;
       li {
-        i {
-          font-size: 1.5rem;
-          color: $blackColor;
+        .fa-facebook:hover {
+          color: #3b5998;
+        }
+        .fa-instagram:hover {
+          color: #833ab4;
+        }
+        .fa-youtube:hover {
+          color: #ff0000;
+        }
+        .fa-dribbble:hover {
+          color: #f082ac;
         }
 
-        i:hover {
-          color: $greyColor;
-          transition: 0.3s all ease-in-out;
+        a {
+          i {
+            font-size: 1.5rem;
+            color: $blackColor;
+          }
+
+          i:hover {
+            color: $greyColor;
+            transition: 0.3s all ease-in-out;
+          }
         }
       }
     }
@@ -410,6 +425,33 @@ header {
   }
 }
 
+.topBttn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: 0.5s all ease-in-out;
+
+  button {
+    background-color: $blackColor;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid $blackColor;
+    transition: 0.5s all ease-in-out;
+  }
+
+  button:hover {
+    padding: 0.8rem 1.5rem;
+    transition: 0.5s all ease-in-out;
+  }
+}
+
 footer {
   display: block;
   text-align: center;
@@ -431,6 +473,19 @@ footer {
     max-width: 200px;
     padding: 1rem 0 1rem;
     justify-content: space-evenly;
+
+    .fa-facebook:hover {
+      color: #3b5998;
+    }
+    .fa-instagram:hover {
+      color: #833ab4;
+    }
+    .fa-youtube:hover {
+      color: #ff0000;
+    }
+    .fa-dribbble:hover {
+      color: #f082ac;
+    }
     li {
       i {
         font-size: 1.3rem;

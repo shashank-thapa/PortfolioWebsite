@@ -1,6 +1,7 @@
 let btnHamburger = document.querySelector("#btnHamburger");
 let mobileMenu = document.querySelector("#mobileMenu");
 let body = document.querySelector("#body");
+let topBttn = document.querySelector("#topBttn");
 
 btnHamburger.addEventListener("click", function () {
   if (btnHamburger.classList.contains("open")) {
@@ -13,3 +14,23 @@ btnHamburger.addEventListener("click", function () {
     mobileMenu.style.display = "block";
   }
 });
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 400 ||
+    document.documentElement.scrollTop > 400
+  ) {
+    topBttn.style.opacity = "1";
+  } else {
+    topBttn.style.opacity = "0";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
